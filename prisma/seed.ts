@@ -40,6 +40,41 @@ async function seed() {
     },
   });
 
+  const posts = [
+    {
+        slug: "my-first-post",
+        title: "My First Post!",
+        markdown: `# This is my first post!
+        
+        Isn't it great?
+          `.trim(),
+    },
+    {
+        slug: "my-second-post",
+        title: "My second Post!",
+        markdown: `# This is my second post!
+        
+        Isn't it amazing?
+          `.trim(),
+    },
+    {
+        slug: "my-third-post",
+        title: "My third Post!",
+        markdown: `# This is my third post!
+        
+        Isn't it cool?
+          `.trim(),
+    },
+  ];
+
+  for (const post of posts) {
+    await prisma.post.upsert({
+      where: { slug: post.slug },
+      update: post,
+      create: post,
+    })
+  }
+
   console.log(`Database has been seeded. 🌱`);
 }
 
