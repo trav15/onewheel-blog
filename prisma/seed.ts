@@ -42,28 +42,32 @@ async function seed() {
 
   const posts = [
     {
-        slug: "my-first-post",
-        title: "My First Post!",
-        markdown: `# This is my first post!
-        
-        Isn't it great?
-          `.trim(),
+      slug: "my-first-post",
+      title: "My First Post!",
+      markdown: `
+# This is my first post!
+Isn't it great?
+      `.trim(),
     },
     {
-        slug: "my-second-post",
-        title: "My second Post!",
-        markdown: `# This is my second post!
-        
-        Isn't it amazing?
-          `.trim(),
+      slug: "my-second-post",
+      title: "My Second Post!",
+      markdown: `
+# This is my second post!
+## Isn't it cool? Here's some reasons
+- It's the second one
+- It's an improvement of the first one
+- It has three reasons
+      `.trim(),
     },
     {
-        slug: "my-third-post",
-        title: "My third Post!",
-        markdown: `# This is my third post!
-        
-        Isn't it cool?
-          `.trim(),
+      slug: "trail-riding-with-onewheel",
+      title: "Trail Riding with Onewheel",
+      markdown: `
+# Floating the trails
+Have you ever tried riding a onewheel? It's an out-of-this-world _experience_!
+Imagine that, but in the beauty of nature and it's just amazing.
+      `.trim(),
     },
   ];
 
